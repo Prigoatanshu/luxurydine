@@ -17,3 +17,19 @@
   }
 
 }
+body {
+  letter-spacing: 0.5px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Georgia', serif;
+}
+
+.btn-danger {
+  background: linear-gradient(to right, #b31217, #e52d27);
+  border: none;
+}
+
+footer {
+  font-size: 14px;
+}
