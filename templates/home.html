@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Carousel -->
+<div id="hero" class="carousel slide" data-bs-ride="carousel">
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" class="d-block w-100 hero-img">
+    </div>
+
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1" class="d-block w-100 hero-img">
+    </div>
+
+  </div>
+
+</div>
+
+<!-- About -->
+<section class="container my-5 fade">
+
+  <h2 class="text-center">Welcome to Luxury Dine</h2>
+  <p class="text-center">Fine dining experience inspired by world-class hotels.</p>
+
+</section>
+
+<!-- Reservation -->
+<section class="bg-light p-5 fade">
+
+  <div class="container">
+
+    <h3 class="text-center">Book a Table</h3>
+
+    <form class="row g-3">
+
+      <div class="col-md-6">
+        <input class="form-control" placeholder="Name">
+      </div>
+
+      <div class="col-md-6">
+        <input class="form-control" placeholder="Phone">
+      </div>
+
+      <div class="col-md-6">
+        <input type="date" class="form-control">
+      </div>
+
+      <div class="col-md-6">
+        <input type="time" class="form-control">
+      </div>
+
+      <div class="col-12 text-center">
+        <button class="btn btn-danger">Reserve</button>
+      </div>
+
+    </form>
+
+  </div>
+
+</section>
+
+{% endblock %}
