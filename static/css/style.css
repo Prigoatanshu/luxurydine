@@ -56,3 +56,9 @@ footer {
   transform: translateY(-6px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
+.menu-category {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  border-left: 5px solid #b31217;
+  padding-left: 12px;
+}
