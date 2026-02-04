@@ -9,130 +9,34 @@
     <p class="text-muted">A refined selection inspired by the season, crafted with precision.</p>
   </div>
 
-  <!-- ================= STARTERS ================= -->
-  <h4 class="menu-category mb-4">Starters</h4>
-  <div class="row g-4 mb-5">
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Seared scallops">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Seared Scallops</h5>
-          <p class="text-muted mb-2">Citrus beurre blanc, fennel pollen</p>
-          <p class="text-muted mb-0">$16</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=800&q=80" alt="Heirloom salad">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Heirloom Salad</h5>
-          <p class="text-muted mb-2">Burrata, basil oil, aged balsamic</p>
-          <p class="text-muted mb-0">$12</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=800&q=80" alt="Truffle pasta starter">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Truffle Tagliolini</h5>
-          <p class="text-muted mb-2">Black truffle, parmesan crema</p>
-          <p class="text-muted mb-0">$18</p>
-        </div>
-      </div>
+  <div class="menu-tabs mb-5">
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+      {% for category in categories %}
+        <a class="menu-tab" href="#{{ category|lower|replace(' ', '-') }}">{{ category }}</a>
+      {% endfor %}
     </div>
   </div>
 
-  <!-- ================= MAIN COURSE ================= -->
-  <h4 class="menu-category mb-4">Main Course</h4>
-  <div class="row g-4 mb-5">
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Butter-poached chicken">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Butter-Poached Chicken</h5>
-          <p class="text-muted mb-2">Wild mushroom jus, thyme</p>
-          <p class="text-muted mb-0">$24</p>
+  {% for category in categories %}
+    <h4 class="menu-category mb-4" id="{{ category|lower|replace(' ', '-') }}">{{ category }}</h4>
+    <div class="row g-4 mb-5">
+      {% for item in grouped_items[category] %}
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card menu-card shadow-sm">
+            <img src="{{ item['image_url'] }}" alt="{{ item['name'] }}">
+            <div class="card-body text-center">
+              <h5 class="mb-1">{{ item['name'] }}</h5>
+              <p class="text-muted mb-2">{{ item['description'] }}</p>
+              <p class="menu-price mb-3">{{ item['price'] }}</p>
+              <a class="btn btn-success btn-sm whatsapp-btn" target="_blank" href="{{ whatsapp_link(item) }}">
+                <i class="fa-brands fa-whatsapp me-1"></i> WhatsApp Order
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      {% endfor %}
     </div>
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=800&q=80" alt="Sea bass">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Pan-Seared Sea Bass</h5>
-          <p class="text-muted mb-2">Saffron risotto, lemon zest</p>
-          <p class="text-muted mb-0">$29</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1604908554149-6d5f6a1d1b94?auto=format&fit=crop&w=800&q=80" alt="Wagyu steak">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Wagyu Steak</h5>
-          <p class="text-muted mb-2">Truffle potato puree, jus</p>
-          <p class="text-muted mb-0">$38</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Braised short rib">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Braised Short Rib</h5>
-          <p class="text-muted mb-2">Celery root, red wine glaze</p>
-          <p class="text-muted mb-0">$32</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80" alt="Wild mushroom risotto">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Wild Mushroom Risotto</h5>
-          <p class="text-muted mb-2">Porcini, aged pecorino</p>
-          <p class="text-muted mb-0">$22</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================= DESSERTS ================= -->
-  <h4 class="menu-category mb-4">Desserts</h4>
-  <div class="row g-4">
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80" alt="Chocolate souffle">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Chocolate Souffle</h5>
-          <p class="text-muted mb-2">Madagascar vanilla, cacao nibs</p>
-          <p class="text-muted mb-0">$12</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=800&q=80" alt="Citrus tart">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Citrus Tart</h5>
-          <p class="text-muted mb-2">Lemon curd, candied peel</p>
-          <p class="text-muted mb-0">$11</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="card menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=800&q=80" alt="Berry parfait">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Berry Parfait</h5>
-          <p class="text-muted mb-2">Mascarpone, mint, berry compote</p>
-          <p class="text-muted mb-0">$10</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% endfor %}
 </div>
 
 {% endblock %}
