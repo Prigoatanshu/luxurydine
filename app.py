@@ -182,6 +182,22 @@ def menu():
 def contact():
     return render_template("contact.html", title="Contact")
 
+@app.route("/about")
+def about():
+    return render_template("about.html", title="About")
+
+@app.route("/gallery")
+def gallery():
+    return render_template("gallery.html", title="Gallery")
+
+@app.route("/events")
+def events():
+    return render_template("events.html", title="Events")
+
+@app.route("/private-dining")
+def private_dining():
+    return render_template("private_dining.html", title="Private Dining")
+
 @app.route("/admin", methods=["GET", "POST"])
 def admin_login():
     if request.method == "POST":

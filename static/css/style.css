@@ -237,6 +237,104 @@ h1, h2, h3, h4, h5, .navbar-brand {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
+.feature-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card i {
+  color: var(--gold);
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+  font-style: italic;
+}
+
+.press-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 991px) {
+  .hero-img {
+    height: 420px;
+  }
+
+  .hero-caption h1 {
+    font-size: clamp(2rem, 5vw + 0.5rem, 3rem);
+  }
+
+  .navbar .nav-link {
+    font-size: 12px;
+  }
+
+  .menu-tabs {
+    top: 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    letter-spacing: 0.1px;
+  }
+
+  .hero-img {
+    height: 340px;
+  }
+
+  .hero-caption {
+    padding: 0 12px;
+  }
+
+  .hero-caption p {
+    font-size: 0.95rem;
+  }
+
+  .story-card,
+  .feature-card,
+  .stat-card,
+  .testimonial-card,
+  .press-card,
+  .reservation-panel {
+    padding: 18px;
+  }
+
+  .menu-card img {
+    height: 200px;
+  }
+
+  .menu-tabs {
+    position: static;
+    padding: 6px 0 12px;
+  }
+
+  .menu-tab {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+  }
+
+  .btn-danger,
+  .btn-outline-wine {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
 .accent-badge {
   display: inline-flex;
   gap: 10px;
