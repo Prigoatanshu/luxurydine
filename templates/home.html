@@ -9,8 +9,8 @@
          loop
          playsinline
          preload="none"
-         poster="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80"
-         data-src="https://www.w3schools.com/html/mov_bbb.mp4">
+         poster="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80">
+    <source data-src="/static/videos/hero.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
   <div class="hero-caption">
@@ -182,8 +182,8 @@
           <video controls preload="none"
                  class="js-lazy-video"
                  poster="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=1200&q=80"
-                 data-src="https://www.w3schools.com/html/mov_bbb.mp4">
-            <source data-src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                 >
+            <source data-src="/static/videos/chef-table.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -198,9 +198,8 @@
         <div class="ratio ratio-16x9">
           <video autoplay muted loop playsinline preload="none"
                  class="js-lazy-video"
-                 poster="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80"
-                 data-src="https://www.w3schools.com/html/movie.mp4">
-            <source data-src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                 poster="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80">
+            <source data-src="/static/videos/ambience.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -218,15 +217,14 @@
     var videos = document.querySelectorAll(".js-lazy-video");
     if (!("IntersectionObserver" in window)) {
       videos.forEach(function (video) {
-        var src = video.getAttribute("data-src");
-        if (src) {
-          video.setAttribute("src", src);
-        }
         var source = video.querySelector("source");
         if (source && source.getAttribute("data-src")) {
           source.setAttribute("src", source.getAttribute("data-src"));
         }
         video.load();
+        if (video.autoplay && video.muted) {
+          video.play().catch(function () {});
+        }
       });
       return;
     }
@@ -235,15 +233,14 @@
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         var video = entry.target;
-        var src = video.getAttribute("data-src");
-        if (src) {
-          video.setAttribute("src", src);
-        }
         var source = video.querySelector("source");
         if (source && source.getAttribute("data-src")) {
           source.setAttribute("src", source.getAttribute("data-src"));
         }
         video.load();
+        if (video.autoplay && video.muted) {
+          video.play().catch(function () {});
+        }
         obs.unobserve(video);
       });
     }, { rootMargin: "200px 0px" });

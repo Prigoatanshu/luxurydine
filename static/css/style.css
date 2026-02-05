@@ -373,6 +373,22 @@ h1, h2, h3, h4, h5, .navbar-brand {
     letter-spacing: 0.1px;
   }
 
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .row > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .navbar-brand {
     font-size: 1.1rem;
   }
@@ -416,7 +432,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
   section.container.my-5 {
     margin-top: 24px;
     margin-bottom: 24px;
-    padding: 22px 18px;
+    padding: 0;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(195, 154, 107, 0.16);
     border-radius: 18px;
@@ -429,6 +445,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
   .press-card,
   .reservation-panel {
     padding: 18px;
+    margin: 0 12px;
   }
 
   .row.g-4 {
@@ -460,6 +477,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
 
   .video-card {
     padding: 14px;
+    margin: 0 12px;
   }
 
   .btn-danger,
