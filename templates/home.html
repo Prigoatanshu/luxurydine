@@ -3,15 +3,10 @@
 
 <!-- Hero -->
 <section class="position-relative fade hero-video">
-  <video class="hero-video-bg js-lazy-video"
-         autoplay
-         muted
-         loop
-         playsinline
-         preload="none"
-         poster="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80">
-    <source data-src="/static/videos/hero.mp4" type="video/mp4">
-  </video>
+  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80"
+       class="w-100 hero-video-bg"
+       style="object-fit:cover;"
+       alt="Luxury dining room">
   <div class="hero-overlay"></div>
   <div class="hero-caption">
     <div>
@@ -85,43 +80,45 @@
 </section>
 
 <!-- Signature Dishes -->
-<section class="container my-5 fade">
-  <div class="text-center mb-4">
-    <div class="section-title">Signature Dishes</div>
-    <div class="section-divider"></div>
-    <h3 class="mt-3">Satisfy Your Cravings</h3>
-  </div>
-  <div class="row g-4">
-    <div class="col-md-4">
-      <div class="menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Seared scallops">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Seared Scallops</h5>
-          <p class="text-muted mb-0">Citrus beurre blanc, fennel pollen</p>
+<section class="signature-dishes">
+  <div class="container my-5 fade">
+    <div class="text-center mb-4">
+      <div class="section-title">Signature Dishes</div>
+      <div class="section-divider"></div>
+      <h3 class="mt-3">Satisfy Your Cravings</h3>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="menu-card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Seared scallops">
+          <div class="card-body text-center">
+            <h5 class="mb-1">Seared Scallops</h5>
+            <p class="text-muted mb-0">Citrus beurre blanc, fennel pollen</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="menu-card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1604908554149-6d5f6a1d1b94?auto=format&fit=crop&w=800&q=80" alt="Wagyu steak">
+          <div class="card-body text-center">
+            <h5 class="mb-1">Wagyu Steak</h5>
+            <p class="text-muted mb-0">Truffle potato puree, jus</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="menu-card shadow-sm">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80" alt="Chocolate souffle">
+          <div class="card-body text-center">
+            <h5 class="mb-1">Chocolate Souffle</h5>
+            <p class="text-muted mb-0">Madagascar vanilla, cacao nibs</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1604908554149-6d5f6a1d1b94?auto=format&fit=crop&w=800&q=80" alt="Wagyu steak">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Wagyu Steak</h5>
-          <p class="text-muted mb-0">Truffle potato puree, jus</p>
-        </div>
-      </div>
+    <div class="text-center mt-4">
+      <a class="btn btn-outline-wine px-4" href="/menu">View All Dishes</a>
     </div>
-    <div class="col-md-4">
-      <div class="menu-card shadow-sm">
-        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80" alt="Chocolate souffle">
-        <div class="card-body text-center">
-          <h5 class="mb-1">Chocolate Souffle</h5>
-          <p class="text-muted mb-0">Madagascar vanilla, cacao nibs</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="text-center mt-4">
-    <a class="btn btn-outline-wine px-4" href="/menu">View All Dishes</a>
   </div>
 </section>
 
