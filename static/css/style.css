@@ -403,6 +403,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
 @media (max-width: 767px) {
   body {
     letter-spacing: 0.1px;
+    font-size: 17px;
   }
 
   .container {
@@ -446,15 +447,17 @@ h1, h2, h3, h4, h5, .navbar-brand {
   }
 
   .hero-caption p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .hero-caption h1 {
+    font-size: 2.1rem;
     margin-bottom: 10px;
   }
 
   .section-title {
     letter-spacing: 1px;
+    font-size: 0.95rem;
   }
 
   .section-divider {
@@ -477,7 +480,21 @@ h1, h2, h3, h4, h5, .navbar-brand {
   .press-card,
   .reservation-panel {
     padding: 18px;
-    margin: 0 12px;
+    margin: 0 8px;
+  }
+
+  .feature-card h5,
+  .menu-card h5,
+  .story-card h4,
+  .stat-card h4 {
+    font-size: 1.05rem;
+  }
+
+  .feature-card p,
+  .menu-card p,
+  .story-card p,
+  .stat-card p {
+    font-size: 0.98rem;
   }
 
   .row.g-4 {
@@ -489,7 +506,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
   }
 
   .menu-card img {
-    height: 180px;
+    height: 210px;
   }
 
   .menu-tabs {
@@ -509,7 +526,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
 
   .video-card {
     padding: 14px;
-    margin: 0 12px;
+    margin: 0 8px;
   }
 
   .btn-danger,
