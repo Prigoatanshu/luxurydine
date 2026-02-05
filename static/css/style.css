@@ -638,3 +638,36 @@ footer {
     height: auto !important;
   }
 }
+/* ================= REMOVE MOBILE SIDE MARGINS ================= */
+@media (max-width: 768px) {
+
+  /* Kill Bootstrap container margins */
+  .container,
+  .container-fluid {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Sections should span full width */
+  section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Inner content spacing (controlled padding) */
+  .inner-content,
+  .content-wrap {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  /* Full-width images */
+  img,
+  .carousel img {
+    width: 100%;
+    display: block;
+  }
+}
